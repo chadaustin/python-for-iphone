@@ -19,7 +19,7 @@ rm -rf Python-2.6.5
 # build for native machine
 tar -xjf Python-2.6.5.tar.bz2
 pushd ./Python-2.6.5
-CC="clang -m32" ./configure
+CC="gcc -m32" ./configure
 make python.exe Parser/pgen
 mv python.exe hostpython
 mv Parser/pgen Parser/hostpgen
